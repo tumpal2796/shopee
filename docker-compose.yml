@@ -1,0 +1,23 @@
+version: '3'
+services:
+  db:
+    image: postgres
+    environment:
+      POSTGRES_DB: billing
+      POSTGRES_USER: ubilling
+      POSTGRES_PASSWORD: pbilling
+    ports:
+      - 5432:5432
+    volumes:
+      - ./transaction.sql:/docker-entrypoint-initdb.d/transaction.sql
+  app:
+    build: .
+    volumes:
+      - .:/go/src/app
+    command: ["./wait-for-it.sh", "db:5432", "--", "go", "run", "app.go"]
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    links:
+      - db

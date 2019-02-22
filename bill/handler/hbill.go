@@ -5,9 +5,7 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/sophee/bill/domain"
-	"github.com/sophee/database"
-	"github.com/sophee/transaction/resource"
+	"github.com/tumpal2796/sophee/bill/domain"
 )
 
 type Response struct {
@@ -16,18 +14,23 @@ type Response struct {
 	Error      string      `json:error`
 }
 
-func GetMyBill(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
-	var response Response
+type BillInf interface {
+	GetMyBill(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
+}
 
-	db, err := database.GetPSQLDB()
-	if err != nil {
-		w.Write([]byte(err.Error()))
-		return
+type BillImpl struct {
+	DomainBill domain.BillInf
+}
+
+func NewBill(bill domain.BillInf) BillInf {
+	return &BillImpl{
+		DomainBill: bill,
 	}
+}
 
-	tresource := resource.New(db)
-	dbill := domain.NewBill(tresource)
-	data, err := dbill.GetMyBill()
+func (bill *BillImpl) GetMyBill(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+	var response Response
+	data, err := bill.DomainBill.GetMyBill()
 	if err != nil {
 		w.Write([]byte(err.Error()))
 		return

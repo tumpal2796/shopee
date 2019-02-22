@@ -1,9 +1,9 @@
 package model
 
 import (
-	mdetailbill "github.com/sophee/calculator/detailcalculation/model"
-	msummary "github.com/sophee/calculator/summary/model"
-	mtransaction "github.com/sophee/transaction/model"
+	mdetailbill "github.com/tumpal2796/sophee/calculator/detailcalculation/model"
+	msummary "github.com/tumpal2796/sophee/calculator/summary/model"
+	mtransaction "github.com/tumpal2796/sophee/transaction/model"
 )
 
 type Bill struct {

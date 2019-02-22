@@ -8,9 +8,8 @@ import (
 	"time"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/sophee/database"
-	"github.com/sophee/transaction/model"
-	"github.com/sophee/transaction/resource"
+	"github.com/tumpal2796/sophee/transaction/model"
+	"github.com/tumpal2796/sophee/transaction/resource"
 )
 
 type Response struct {
@@ -19,18 +18,25 @@ type Response struct {
 	Error      string      `json:error`
 }
 
-func AddMyBill(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
+type TransactionInf interface {
+	AddMyBill(w http.ResponseWriter, r *http.Request, ps httprouter.Params)
+}
+
+type TransactionImpl struct {
+	ResourceTransaction resource.TransactionInf
+}
+
+func NewTransactionHandler(resource resource.TransactionInf) TransactionInf {
+	return &TransactionImpl{
+		ResourceTransaction: resource,
+	}
+}
+
+func (hTransaction *TransactionImpl) AddMyBill(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 	var response Response
 
 	ctx, cancel := context.WithTimeout(context.Background(), 50*time.Millisecond)
 	defer cancel()
-
-	db, err := database.GetPSQLDB()
-	if err != nil {
-		w.Write([]byte("error"))
-		return
-	}
-	tresource := resource.New(db)
 
 	body, err := ioutil.ReadAll(r.Body)
 	if err != nil {
@@ -45,7 +51,7 @@ func AddMyBill(w http.ResponseWriter, r *http.Request, ps httprouter.Params) {
 		return
 	}
 
-	err = tresource.Insert(ctx, params)
+	err = hTransaction.ResourceTransaction.Insert(ctx, params)
 	if err != nil {
 		w.Write([]byte(err.Error()))
 		return

@@ -1,8 +1,10 @@
 package domain
 
 import (
-	"github.com/sophee/calculator/detailcalculation/model"
-	mtransaction "github.com/sophee/transaction/model"
+	"math"
+
+	"github.com/tumpal2796/sophee/calculator/detailcalculation/model"
+	mtransaction "github.com/tumpal2796/sophee/transaction/model"
 )
 
 type CalculatorInf interface {
@@ -28,4 +30,8 @@ func (calculatorImpl *CalculatorImpl) GetDetailCalculation(transaction mtransact
 	}
 
 	return Tipe.CalculateDetailCalculation(transaction)
+}
+
+func setPrecision(number float64) float64 {
+	return math.Floor(number*100) / 100
 }

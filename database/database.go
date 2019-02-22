@@ -8,7 +8,7 @@ import (
 )
 
 func GetPSQLDB() (*sqlx.DB, error) {
-	db, err := sqlx.Connect("postgres", "user=ubilling password=pbilling dbname=billing host=localhost port=5432 sslmode=disable")
+	db, err := sqlx.Connect("postgres", "user=ubilling password=pbilling dbname=billing host=db port=5432 sslmode=disable")
 	if err != nil {
 		log.Fatalln(err)
 	}

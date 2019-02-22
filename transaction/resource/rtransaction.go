@@ -5,7 +5,7 @@ import (
 
 	"github.com/jmoiron/sqlx"
 
-	"github.com/sophee/transaction/model"
+	"github.com/tumpal2796/sophee/transaction/model"
 )
 
 const (
