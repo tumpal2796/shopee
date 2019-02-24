@@ -6,11 +6,11 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	bdomain "github.com/tumpal2796/sophee/bill/domain"
-	bhandler "github.com/tumpal2796/sophee/bill/handler"
-	"github.com/tumpal2796/sophee/database"
-	thandler "github.com/tumpal2796/sophee/transaction/handler"
-	"github.com/tumpal2796/sophee/transaction/resource"
+	bdomain "github.com/tumpal2796/shopee/bill/domain"
+	bhandler "github.com/tumpal2796/shopee/bill/handler"
+	"github.com/tumpal2796/shopee/database"
+	thandler "github.com/tumpal2796/shopee/transaction/handler"
+	"github.com/tumpal2796/shopee/transaction/resource"
 )
 
 func main() {

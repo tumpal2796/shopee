@@ -4,10 +4,10 @@ import (
 	"testing"
 
 	"github.com/stretchr/testify/assert"
-	mbill "github.com/tumpal2796/sophee/bill/model"
-	mdetailbill "github.com/tumpal2796/sophee/calculator/detailcalculation/model"
-	"github.com/tumpal2796/sophee/calculator/summary/model"
-	mtransaction "github.com/tumpal2796/sophee/transaction/model"
+	mbill "github.com/tumpal2796/shopee/bill/model"
+	mdetailbill "github.com/tumpal2796/shopee/calculator/detailcalculation/model"
+	"github.com/tumpal2796/shopee/calculator/summary/model"
+	mtransaction "github.com/tumpal2796/shopee/transaction/model"
 )
 
 func TestGetSummary(t *testing.T) {

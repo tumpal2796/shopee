@@ -4,11 +4,11 @@ import (
 	"context"
 	"time"
 
-	"github.com/tumpal2796/sophee/bill/model"
-	dcalcdetail "github.com/tumpal2796/sophee/calculator/detailcalculation/domain"
-	dsummary "github.com/tumpal2796/sophee/calculator/summary/domain"
-	"github.com/tumpal2796/sophee/transaction/resource"
-	tresource "github.com/tumpal2796/sophee/transaction/resource"
+	"github.com/tumpal2796/shopee/bill/model"
+	dcalcdetail "github.com/tumpal2796/shopee/calculator/detailcalculation/domain"
+	dsummary "github.com/tumpal2796/shopee/calculator/summary/domain"
+	"github.com/tumpal2796/shopee/transaction/resource"
+	tresource "github.com/tumpal2796/shopee/transaction/resource"
 )
 
 type BillInf interface {

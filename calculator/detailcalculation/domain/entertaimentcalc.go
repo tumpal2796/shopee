@@ -1,8 +1,8 @@
 package domain
 
 import (
-	"github.com/tumpal2796/sophee/calculator/detailcalculation/model"
-	mtransaction "github.com/tumpal2796/sophee/transaction/model"
+	"github.com/tumpal2796/shopee/calculator/detailcalculation/model"
+	mtransaction "github.com/tumpal2796/shopee/transaction/model"
 )
 
 type Entertaiment struct{}

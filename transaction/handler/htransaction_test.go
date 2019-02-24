@@ -11,7 +11,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
 
-	"github.com/tumpal2796/sophee/transaction/resource/mocks"
+	"github.com/tumpal2796/shopee/transaction/resource/mocks"
 )
 
 func TestAddMyBill(t *testing.T) {

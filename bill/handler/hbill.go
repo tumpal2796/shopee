@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/tumpal2796/sophee/bill/domain"
+	"github.com/tumpal2796/shopee/bill/domain"
 )
 
 type Response struct {

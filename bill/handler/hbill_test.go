@@ -10,11 +10,11 @@ import (
 	"github.com/stretchr/testify/mock"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/tumpal2796/sophee/bill/domain/mocks"
-	"github.com/tumpal2796/sophee/bill/model"
-	mdetailbill "github.com/tumpal2796/sophee/calculator/detailcalculation/model"
-	msummary "github.com/tumpal2796/sophee/calculator/summary/model"
-	mtransaction "github.com/tumpal2796/sophee/transaction/model"
+	"github.com/tumpal2796/shopee/bill/domain/mocks"
+	"github.com/tumpal2796/shopee/bill/model"
+	mdetailbill "github.com/tumpal2796/shopee/calculator/detailcalculation/model"
+	msummary "github.com/tumpal2796/shopee/calculator/summary/model"
+	mtransaction "github.com/tumpal2796/shopee/transaction/model"
 )
 
 func TestNewBill(t *testing.T) {

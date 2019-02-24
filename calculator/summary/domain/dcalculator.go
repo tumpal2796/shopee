@@ -1,8 +1,8 @@
 package domain
 
 import (
-	mbill "github.com/tumpal2796/sophee/bill/model"
-	"github.com/tumpal2796/sophee/calculator/summary/model"
+	mbill "github.com/tumpal2796/shopee/bill/model"
+	"github.com/tumpal2796/shopee/calculator/summary/model"
 )
 
 type SummaryCalcInf interface {

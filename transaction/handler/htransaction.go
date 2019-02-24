@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/julienschmidt/httprouter"
-	"github.com/tumpal2796/sophee/transaction/model"
-	"github.com/tumpal2796/sophee/transaction/resource"
+	"github.com/tumpal2796/shopee/transaction/model"
+	"github.com/tumpal2796/shopee/transaction/resource"
 )
 
 type Response struct {

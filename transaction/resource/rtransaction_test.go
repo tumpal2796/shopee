@@ -8,7 +8,7 @@ import (
 
 	"github.com/jmoiron/sqlx"
 	"github.com/stretchr/testify/assert"
-	"github.com/tumpal2796/sophee/transaction/model"
+	"github.com/tumpal2796/shopee/transaction/model"
 	sqlmock "gopkg.in/DATA-DOG/go-sqlmock.v1"
 )
 

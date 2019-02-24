@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/assert"
 
-	"github.com/tumpal2796/sophee/calculator/detailcalculation/model"
-	mtransaction "github.com/tumpal2796/sophee/transaction/model"
+	"github.com/tumpal2796/shopee/calculator/detailcalculation/model"
+	mtransaction "github.com/tumpal2796/shopee/transaction/model"
 )
 
 func TestCalculateDetailCalculationEntertainment(t *testing.T) {

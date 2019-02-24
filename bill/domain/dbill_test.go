@@ -6,16 +6,16 @@ import (
 
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"
-	"github.com/tumpal2796/sophee/bill/model"
-	dcalcdetail "github.com/tumpal2796/sophee/calculator/detailcalculation/domain"
-	calcdetailmocks "github.com/tumpal2796/sophee/calculator/detailcalculation/domain/mocks"
-	mcalcdetail "github.com/tumpal2796/sophee/calculator/detailcalculation/model"
-	dsummary "github.com/tumpal2796/sophee/calculator/summary/domain"
-	summarymocks "github.com/tumpal2796/sophee/calculator/summary/domain/mocks"
-	msummary "github.com/tumpal2796/sophee/calculator/summary/model"
-	mtransaction "github.com/tumpal2796/sophee/transaction/model"
-	"github.com/tumpal2796/sophee/transaction/resource"
-	tmocks "github.com/tumpal2796/sophee/transaction/resource/mocks"
+	"github.com/tumpal2796/shopee/bill/model"
+	dcalcdetail "github.com/tumpal2796/shopee/calculator/detailcalculation/domain"
+	calcdetailmocks "github.com/tumpal2796/shopee/calculator/detailcalculation/domain/mocks"
+	mcalcdetail "github.com/tumpal2796/shopee/calculator/detailcalculation/model"
+	dsummary "github.com/tumpal2796/shopee/calculator/summary/domain"
+	summarymocks "github.com/tumpal2796/shopee/calculator/summary/domain/mocks"
+	msummary "github.com/tumpal2796/shopee/calculator/summary/model"
+	mtransaction "github.com/tumpal2796/shopee/transaction/model"
+	"github.com/tumpal2796/shopee/transaction/resource"
+	tmocks "github.com/tumpal2796/shopee/transaction/resource/mocks"
 )
 
 func TestNewBill(t *testing.T) {
